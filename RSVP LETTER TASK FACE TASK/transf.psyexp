@@ -1,0 +1,438 @@
+<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="3.0.0b11">
+  <Settings>
+    <Param name="Completed URL" updates="None" val="completedURL" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant':'', 'session':'001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="incompleteURL" valType="str"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="use prefs" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="(1024, 768)" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="transf" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="import random&amp;#10;import subprocess&amp;#10;import xlrd&amp;#10;&amp;#10;Letters = [&quot;W&quot;, &quot;E&quot;, &quot;T&quot;,&quot;Y&quot;, &quot;I&quot;, &quot;A&quot;, &quot;F&quot;, &quot;H&quot;, &quot;K&quot;, &quot;L&quot;, &quot;S&quot;, &quot;V&quot;, &quot;G&quot;, &quot;J&quot;]&amp;#10;Tpos = [8,9,10,11,12]&amp;#10;&amp;#10;FillCol = [(1,1,1)]&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="random.shuffle(Letters)&amp;#10;random.shuffle(Tpos)&amp;#10;&amp;#10;if Tpos[0] == 8:&amp;#10;    P1.setText(Letters[0])&amp;#10;    P2.setText(Letters[1])&amp;#10;    P3.setText(Letters[2])&amp;#10;    P4.setText(Letters[3])&amp;#10;    P5.setText(Letters[4])&amp;#10;    P6.setText(Letters[5])&amp;#10;    P7.setText(Letters[6])&amp;#10;    P8.setText(Target)&amp;#10;    P9.setText(Letters[7])&amp;#10;    P10.setText(Letters[8])&amp;#10;    P11.setText(Letters[9])&amp;#10;    P12.setText(Letters[10])&amp;#10;    P13.setText(Letters[11])&amp;#10;    P14.setText(Letters[12])&amp;#10;    P15.setText(Letters[13])&amp;#10;&amp;#10;    P1.setColor(FillCol[0], 'rgb')&amp;#10;    P2.setColor(FillCol[0], 'rgb')&amp;#10;    P3.setColor(FillCol[0], 'rgb')&amp;#10;    P4.setColor(FillCol[0], 'rgb')&amp;#10;    P5.setColor(FillCol[0], 'rgb')&amp;#10;    P6.setColor(FillCol[0], 'rgb')&amp;#10;    P7.setColor(FillCol[0], 'rgb')&amp;#10;    P8.setColor(FillCol[0], 'rgb')&amp;#10;    P9.setColor(FillCol[0], 'rgb')&amp;#10;    P10.setColor(FillCol[0], 'rgb')&amp;#10;    P11.setColor(FillCol[0], 'rgb')&amp;#10;    P12.setColor(FillCol[0], 'rgb')&amp;#10;    P13.setColor(FillCol[0], 'rgb')&amp;#10;    P14.setColor(FillCol[0], 'rgb')&amp;#10;    P15.setColor(FillCol[0], 'rgb')&amp;#10;&amp;#10;&amp;#10;elif Tpos[0] == 9:&amp;#10;    P1.setText(Letters[0])&amp;#10;    P2.setText(Letters[1])&amp;#10;    P3.setText(Letters[2])&amp;#10;    P4.setText(Letters[3])&amp;#10;    P5.setText(Letters[4])&amp;#10;    P6.setText(Letters[5])&amp;#10;    P7.setText(Letters[6])&amp;#10;    P8.setText(Letters[7])&amp;#10;    P9.setText(Target)&amp;#10;    P10.setText(Letters[8])&amp;#10;    P11.setText(Letters[9])&amp;#10;    P12.setText(Letters[10])&amp;#10;    P13.setText(Letters[11])&amp;#10;    P14.setText(Letters[12])&amp;#10;    P15.setText(Letters[13])&amp;#10;&amp;#10;    P1.setColor(FillCol[0], 'rgb')&amp;#10;    P2.setColor(FillCol[0], 'rgb')&amp;#10;    P3.setColor(FillCol[0], 'rgb')&amp;#10;    P4.setColor(FillCol[0], 'rgb')&amp;#10;    P5.setColor(FillCol[0], 'rgb')&amp;#10;    P6.setColor(FillCol[0], 'rgb')&amp;#10;    P7.setColor(FillCol[0], 'rgb')&amp;#10;    P8.setColor(FillCol[0], 'rgb')&amp;#10;    P9.setColor(FillCol[0], 'rgb')&amp;#10;    P10.setColor(FillCol[0], 'rgb')&amp;#10;    P11.setColor(FillCol[0], 'rgb')&amp;#10;    P12.setColor(FillCol[0], 'rgb')&amp;#10;    P13.setColor(FillCol[0], 'rgb')&amp;#10;    P14.setColor(FillCol[0], 'rgb')&amp;#10;    P15.setColor(FillCol[0], 'rgb')&amp;#10;elif Tpos[0] == 10:&amp;#10;    P1.setText(Letters[0])&amp;#10;    P2.setText(Letters[1])&amp;#10;    P3.setText(Letters[2])&amp;#10;    P4.setText(Letters[3])&amp;#10;    P5.setText(Letters[4])&amp;#10;    P6.setText(Letters[5])&amp;#10;    P7.setText(Letters[6])&amp;#10;    P8.setText(Letters[7])&amp;#10;    P9.setText(Letters[8])&amp;#10;    P10.setText(Target)&amp;#10;    P11.setText(Letters[9])&amp;#10;    P12.setText(Letters[10])&amp;#10;    P13.setText(Letters[11])&amp;#10;    P14.setText(Letters[12])&amp;#10;    P15.setText(Letters[13])&amp;#10;&amp;#10;    P1.setColor(FillCol[0], 'rgb')&amp;#10;    P2.setColor(FillCol[0], 'rgb')&amp;#10;    P3.setColor(FillCol[0], 'rgb')&amp;#10;    P4.setColor(FillCol[0], 'rgb')&amp;#10;    P5.setColor(FillCol[0], 'rgb')&amp;#10;    P6.setColor(FillCol[0], 'rgb')&amp;#10;    P7.setColor(FillCol[0], 'rgb')&amp;#10;    P8.setColor(FillCol[0], 'rgb')&amp;#10;    P9.setColor(FillCol[0], 'rgb')&amp;#10;    P10.setColor(FillCol[0], 'rgb')&amp;#10;    P11.setColor(FillCol[0], 'rgb')&amp;#10;    P12.setColor(FillCol[0], 'rgb')&amp;#10;    P13.setColor(FillCol[0], 'rgb')&amp;#10;    P14.setColor(FillCol[0], 'rgb')&amp;#10;    P15.setColor(FillCol[0], 'rgb')&amp;#10;&amp;#10;elif Tpos[0] == 11:&amp;#10;    P1.setText(Letters[0])&amp;#10;    P2.setText(Letters[1])&amp;#10;    P3.setText(Letters[2])&amp;#10;    P4.setText(Letters[3])&amp;#10;    P5.setText(Letters[4])&amp;#10;    P6.setText(Letters[5])&amp;#10;    P7.setText(Letters[6])&amp;#10;    P8.setText(Letters[7])&amp;#10;    P9.setText(Letters[8])&amp;#10;    P10.setText(Letters[9])&amp;#10;    P11.setText(Target)&amp;#10;    P12.setText(Letters[10])&amp;#10;    P13.setText(Letters[11])&amp;#10;    P14.setText(Letters[12])&amp;#10;    P15.setText(Letters[13])&amp;#10;&amp;#10;    P1.setColor(FillCol[0], 'rgb')&amp;#10;    P2.setColor(FillCol[0], 'rgb')&amp;#10;    P3.setColor(FillCol[0], 'rgb')&amp;#10;    P4.setColor(FillCol[0], 'rgb')&amp;#10;    P5.setColor(FillCol[0], 'rgb')&amp;#10;    P6.setColor(FillCol[0], 'rgb')&amp;#10;    P7.setColor(FillCol[0], 'rgb')&amp;#10;    P8.setColor(FillCol[0], 'rgb')&amp;#10;    P9.setColor(FillCol[0], 'rgb')&amp;#10;    P10.setColor(FillCol[0], 'rgb')&amp;#10;    P11.setColor(FillCol[0], 'rgb')&amp;#10;    P12.setColor(FillCol[0], 'rgb')&amp;#10;    P13.setColor(FillCol[0], 'rgb')&amp;#10;    P14.setColor(FillCol[0], 'rgb')&amp;#10;    P15.setColor(FillCol[0], 'rgb')&amp;#10;&amp;#10;elif Tpos[0] == 12:&amp;#10;    P1.setText(Letters[0])&amp;#10;    P2.setText(Letters[1])&amp;#10;    P3.setText(Letters[2])&amp;#10;    P4.setText(Letters[3])&amp;#10;    P5.setText(Letters[4])&amp;#10;    P6.setText(Letters[5])&amp;#10;    P7.setText(Letters[6])&amp;#10;    P8.setText(Letters[7])&amp;#10;    P9.setText(Letters[8])&amp;#10;    P10.setText(Letters[9])&amp;#10;    P11.setText(Letters[10])&amp;#10;    P12.setText(Target)&amp;#10;    P13.setText(Letters[11])&amp;#10;    P14.setText(Letters[12])&amp;#10;    P15.setText(Letters[13])&amp;#10;&amp;#10;    P1.setColor(FillCol[0], 'rgb')&amp;#10;    P2.setColor(FillCol[0], 'rgb')&amp;#10;    P3.setColor(FillCol[0], 'rgb')&amp;#10;    P4.setColor(FillCol[0], 'rgb')&amp;#10;    P5.setColor(FillCol[0], 'rgb')&amp;#10;    P6.setColor(FillCol[0], 'rgb')&amp;#10;    P7.setColor(FillCol[0], 'rgb')&amp;#10;    P8.setColor(FillCol[0], 'rgb')&amp;#10;    P9.setColor(FillCol[0], 'rgb')&amp;#10;    P10.setColor(FillCol[0], 'rgb')&amp;#10;    P11.setColor(FillCol[0], 'rgb')&amp;#10;    P12.setColor(FillCol[0], 'rgb')&amp;#10;    P13.setColor(FillCol[0], 'rgb')&amp;#10;    P14.setColor(FillCol[0], 'rgb')&amp;#10;    P15.setColor(FillCol[0], 'rgb')&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="fixation">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.6" valType="code"/>
+        <Param name="name" updates="None" val="fixation" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="12" valType="code"/>
+        <Param name="text" updates="constant" val="+" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P1">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="12" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P2">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="21" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="Any text&amp;#10;&amp;#10;including line breaks" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P3">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="29" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P4">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P4" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="37" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="Any text&amp;#10;&amp;#10;including line breaks" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P5">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P5" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="45" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="Any text&amp;#10;&amp;#10;including line breaks" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P6">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P6" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="53" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P7">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P7" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="61" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P8">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P8" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="69" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P9">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P9" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="77" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P10">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P10" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="85" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P11">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P11" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="93" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P12">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P12" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="101" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P13">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P13" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="109" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P14">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P14" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="117" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="P15">
+        <Param name="color" updates="constant" val="" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="P15" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="125" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="ResponseWindow">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="10" valType="code"/>
+        <Param name="name" updates="None" val="ResponseWindow" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="128" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="text" updates="constant" val="?" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="Response">
+        <Param name="allowedKeys" updates="constant" val="'z','x','n','m'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="$correctans" valType="str"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="Response" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="frame N" valType="str"/>
+        <Param name="startVal" updates="None" val="128" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (frames)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="1:80" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('Order', 1), ('LeftD', 'FEAR'), ('RightD', None), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 2), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 3), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 4), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 5), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 6), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 7), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 8), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 9), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 10), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 11), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 12), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 13), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 14), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 15), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 16), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 17), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 18), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 19), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 20), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 21), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 22), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 23), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 24), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 25), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 26), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 27), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 28), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 29), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 30), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 31), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 32), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 33), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 34), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 35), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 36), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 37), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 38), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 39), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 40), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 41), ('LeftD', None), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 42), ('LeftD', None), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 43), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 44), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 45), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 46), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 47), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 48), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 49), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 50), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 51), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 52), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 53), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 54), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 55), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 56), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 57), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 58), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 59), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 60), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 61), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 62), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 63), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 64), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 65), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 66), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 67), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 68), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 69), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 70), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 71), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 72), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 73), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 74), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 75), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 76), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 77), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 78), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 79), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 80), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 81), ('LeftD', 'FEAR'), ('RightD', None), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 82), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 83), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 84), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 85), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 86), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 87), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 88), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 89), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 90), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 91), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 92), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 93), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 94), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 95), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 96), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 97), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 98), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 99), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 100), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 101), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 102), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 103), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 104), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 105), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 106), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 107), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 108), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 109), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 110), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 111), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 112), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 113), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 114), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 115), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 116), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 117), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 118), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 119), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 120), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 121), ('LeftD', None), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 122), ('LeftD', None), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 123), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 124), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 125), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 126), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 127), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 128), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 129), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 130), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 131), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 132), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 133), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 134), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 135), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 136), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 137), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 138), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 139), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 140), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 141), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 142), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 143), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 144), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 145), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 146), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 147), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 148), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 149), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 150), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 151), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 152), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 153), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 154), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 155), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 156), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 157), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 158), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 159), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 160), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 161), ('LeftD', 'FEAR'), ('RightD', None), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 162), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 163), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 164), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 165), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 166), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 167), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 168), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 169), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 170), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 171), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 172), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 173), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 174), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 175), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 176), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 177), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 178), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 179), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 180), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 181), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 182), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 183), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 184), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 185), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 186), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 187), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 188), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 189), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 190), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 191), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 192), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 193), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 194), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 195), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 196), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 197), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 198), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 199), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 200), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 201), ('LeftD', None), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 202), ('LeftD', None), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 1)]), OrderedDict([('Order', 203), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 204), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 205), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 206), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 207), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 208), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 209), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 210), ('LeftD', None), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 211), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 212), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 2)]), OrderedDict([('Order', 213), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 214), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 215), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 216), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 217), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 218), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 219), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 220), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 221), ('LeftD', ' '), ('RightD', 'FEAR'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 222), ('LeftD', ' '), ('RightD', 'NEUTRAL'), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 3)]), OrderedDict([('Order', 223), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 224), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 225), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 226), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 227), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 228), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 229), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 230), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 231), ('LeftD', 'FEAR'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 232), ('LeftD', 'NEUTRAL'), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', 4)]), OrderedDict([('Order', 233), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 234), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 235), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 236), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 237), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 238), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 239), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')]), OrderedDict([('Order', 240), ('LeftD', ' '), ('RightD', ' '), ('Target', 'M'), ('correctresp', 'm'), ('Lag', ' ')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="RSVPtrials.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <LoopTerminator name="trials"/>
+  </Flow>
+</PsychoPy2experiment>
